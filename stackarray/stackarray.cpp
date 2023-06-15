@@ -12,19 +12,20 @@ public:
 	 StackArray() {
 		top = -1;
 	}
-
-	string push(string element) {
+	  
+	void push() {
 		if (top == 4) { //step 1
 			cout << "number of data exceerds the limit." << endl;
-			return "";
+			return;
 		}
-	
+		cout << "\nEnter a element : ";
+		string element;
+		getline(cin, element);
 		top++; // step2
+
 		stack_array[top] = element; //step 3
 		cout << endl;
 		cout << element << " ditambahkan(pushead)" << endl;
-
-		return element;
 	}
 
 	void pop() {
@@ -62,6 +63,7 @@ int main() {
 		cout << "1.push\n";
 		cout << "2.pop\n";
 		cout << "3.display\n";
+		cout << "4.exit\n";
 		cout << "\nenter your choice : ";
 		
 	    string input;
@@ -70,11 +72,8 @@ int main() {
 	
 		switch (ch) {
 		case '1' : {
-				cout << "\nEnter a element : ";
-				string element;
-				getline(cin, element);
-				s.push(element);
-				break;
+			s.push();
+			break;
 			} 
 		case '2':
 			if (s.empty()) {
