@@ -64,7 +64,7 @@ int main() {
 		cout << "3.display\n";
 		cout << "\nenter your choice : ";
 		
-		string input;
+	    string input;
 		getline(cin, input);
 		char ch = (input.empty() ? '0' : input[0]);
 	
