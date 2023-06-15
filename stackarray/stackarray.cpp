@@ -23,5 +23,7 @@ public:
 		stack_array[top] = element; //step 3
 		cout << endl;
 		cout << element << " ditambahkan(pushead)" << endl;
+
+		return element;
 	}
 };
