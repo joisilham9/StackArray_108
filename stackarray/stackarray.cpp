@@ -18,5 +18,6 @@ public:
 			cout << "number of data exceerds the limit." << endl;
 			return "";
 		}
+	
 	}
 };
