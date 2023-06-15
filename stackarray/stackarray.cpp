@@ -75,7 +75,7 @@ int main() {
 				getline(cin, element);
 				s.push(element);
 				break;
-			}
+			} 
 		case '2':
 			if (s.empty()) {
 				cout << "\nstack is empty." << endl;
