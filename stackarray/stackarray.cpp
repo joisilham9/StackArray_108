@@ -3,13 +3,13 @@
 
 using namespace std;
 
-class StrackArray {
+class StackArray {
 private:
 	string stack_array[5];
 	int top;
 public:
 	//constructor
-	void StackArray() {
+	 StackArray() {
 		top = -1;
 	}
 
@@ -53,3 +53,46 @@ public:
 
 	}
 };
+
+int main() {
+	StackArray s;
+	while (true) {
+		cout << endl;
+		cout << "\n**stack menu**\n";
+		cout << "1.push\n";
+		cout << "2.pop\n";
+		cout << "3.display\n";
+		cout << "\nenter your choice : ";
+		
+		string input;
+		getline(cin, input);
+		char ch = (input.empty() ? '0' : input[0]);
+	
+		switch (ch) {
+		case '1' : {
+				cout << "\nEnter a element : ";
+				string element;
+				getline(cin, element);
+				s.push(element);
+				break;
+			}
+		case '2':
+			if (s.empty()) {
+				cout << "\nstack is empty." << endl;
+				break;
+			}
+			s.pop();
+			break;
+		case '3' :
+			s.display();
+			break;
+		case '4':
+			return 0;
+		default:
+			cout << "\nInvalid choice." << endl;
+			break;
+		}
+
+
+	}
+}
